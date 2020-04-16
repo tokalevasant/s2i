@@ -11,7 +11,7 @@ public class MainController {
     public String greet(@PathVariable(required = false) String name) {
 
         if (isBlank(name)) {
-            return "Hello Everyone. Great Team Work!!!";
+            return "And this is an example of a simple Java REST API created using S2I with Docker file";
         }
         return "Hello " + name;
     }
