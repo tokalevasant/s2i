@@ -6,9 +6,9 @@ RUN apk add --update \
     wget \
     && rm -rf /var/cache/apk/*
 
-RUN wget https://github.com/tokalevasant/s2i/blob/master/go-team-docker/target/go-team-docker-0.0.1-SNAPSHOT.jar
+RUN wget -O /go-team-docker-0.0.1-SNAPSHOT.jar https://github.com/tokalevasant/s2i/blob/master/go-team-docker/target/go-team-docker-0.0.1-SNAPSHOT.jar
 
-COPY $(pwd)/go-team-docker-0.0.1-SNAPSHOT.jar /app.jar
+COPY  /go-team-docker-0.0.1-SNAPSHOT.jar /app.jar
 
 EXPOSE 8080
 
