@@ -8,7 +8,7 @@ public class MainController {
 
     @GetMapping(value = {"/"})
     public String greet() {
-        return "And this is an example of a simple Java REST API created using S2I with Docker file";
+        return "And this is an example of a simple Java REST API created using S2I with Docker file\n";
     }
 
 }
