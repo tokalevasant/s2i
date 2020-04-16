@@ -6,7 +6,7 @@ RUN apk add --update \
     curl \
     && rm -rf /var/cache/apk/*
 
-RUN curl https://github.com/tokalevasant/s2i/blob/master/go-team-docker/target/go-team-docker-0.0.1-SNAPSHOT.jar
+RUN curl -LJO https://github.com/tokalevasant/s2i/blob/master/go-team-docker/target/go-team-docker-0.0.1-SNAPSHOT.jar
 
 COPY go-team-docker-0.0.1-SNAPSHOT.jar app.jar
 
