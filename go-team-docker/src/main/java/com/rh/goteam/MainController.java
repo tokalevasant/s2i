@@ -11,7 +11,7 @@ public class MainController {
     public String greet(@PathVariable(required = false) String name) {
 
         if (isBlank(name)) {
-            return "Hello Everyone. Great Team Work!!!";
+            return "Hello Everyone. Great Team Work!!!\n";
         }
         return "Hello " + name;
     }
