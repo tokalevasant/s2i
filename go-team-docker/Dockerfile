@@ -2,8 +2,8 @@
 # FROM openjdk:8-jdk-alpine
 
 # For Java 11, try this
-FROM adoptopenjdk/openjdk11:alpine-jre
-#FROM ubi8:8-released
+#FROM adoptopenjdk/openjdk11:alpine-jre
+FROM ubi8:8-released
 
 # Refer to Maven build -> finalName
 ARG JAR_FILE=target/go-team-docker-0.0.1-SNAPSHOT.jar
