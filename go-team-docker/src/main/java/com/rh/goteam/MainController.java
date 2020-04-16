@@ -1,18 +1,14 @@
 package com.rh.goteam;
 
-import org.springframework.web.bind.annotation.*;
-
-import static org.apache.logging.log4j.util.Strings.isBlank;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MainController {
 
-    @GetMapping(value = {"/{name}", "/"})
-    public String greet(@PathVariable(required = false) String name) {
-
-        if (isBlank(name)) {
-            return "And this is an example of a simple Java REST API created using S2I with Docker file";
-        }
-        return "Hello " + name;
+    @GetMapping(value = {"/"})
+    public String greet() {
+        return "And this is an example of a simple Java REST API created using S2I with Docker file";
     }
+
 }
